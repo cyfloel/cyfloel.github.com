@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[夜星寒]]></title>
+  <subtitle><![CDATA[一步一脚印]]></subtitle>
+  <link href="http://cyfloel.github.io//atom.xml" rel="self"/>
+  <link href="http://cyfloel.github.io/"/>
+  <updated>2013-12-08T14:36:25.194Z</updated>
+  <id>http://cyfloel.github.io//</id>
+  <author>
+    <name><![CDATA[Cyfloel]]></name>
+    <email><![CDATA[yangzhibin228@sina.com]]></email>
+  </author>
+  <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[第一个Blog]]></title>
+    <link href="http://cyfloel.github.io/2013/12/08/the-first-blog/"/>
+    <id>http://cyfloel.github.io/2013/12/08/the-first-blog/</id>
+    <published>2013-12-08T12:43:03.000Z</published>
+    <updated>2013-12-08T14:08:23.000Z</updated>
+    <content type="html"><![CDATA[<p>一直以来都想自己弄一个技术博客，但每一次都是半途而废，这一次下定决心，要一步一步走下来，既然想走技术发展的路线，要是连一个简单的Blog都弄不起来，那还是直接放弃好了。</p>
+<p>于是，这一次决心在<a href="www.github.com">Github</a>上搭建自己的博客。在开始的时候，是想使用<a href="http://jekyllrb.com/" target="_blank">jekyll</a>来建的，后来看到<a href="http://zespia.tw/hexo/" target="_blank">hexo</a>，发现它好和jekyll相比，更快也更轻量，因此最后决定采用它来做来博客的框架。<a id="more"></a>从周六开始，一直网上找hexo搭建的教程，折腾了两天，暂时是可以满足现在的需求了。目前是采用<a href="https://github.com/reee/hexo-theme-flat" target="_blank">flat</a>主题，觉得这个主题够简单，修改起来也不复杂，在此感谢flat主题的作者<a href="http://hong.im/" target="_blank">Zhong Hong</a>。</p>
+<p>使用Ubuntu的时候，曾经用过Latex来编写文档，觉得真不错，可以不用考虑排版这些东西。写Blog同样，只想专注于自己写什么，所以尝试使用Markdown来写写。第一篇博文，主要是想试试Markdown的语法，了解一下怎么使用。</p>
+<p>这几天除了一直折腾Blog的东西，也在思考以后自己的路要怎么走，发现现在的心态跟Github的创始人Tom说过的一句话一样：</p>
+<blockquote>
+<p><em>当我老去，回顾一生，我想说，“哇，那是一场冒险”；而不是，“哇，我真的很安稳”</em></p>
+</blockquote>
+<p>在这里，我要非常感谢我的一个好友<a href="http://user.qzone.qq.com/275166533?ADUIN=380013479&amp;ADSESSION=1386495238&amp;ADTAG=CLIENT.QQ.5275_FriendTip.0&amp;ADPUBNO=26274&amp;ptlang=2052" target="_blank">Ben</a>，当一个人迷茫的时候，就会忘记自己当初的梦想。也许将来我也不会成功，但至少我做出了改变。路都是人走出来的。借用Ben的签名：</p>
+<blockquote>
+<p><em>回首，已走。珍惜可以拥有的一切，时间，朋友，亲情，爱人</em></p>
+</blockquote>
+]]></content>
+    <category scheme="http://cyfloel.github.io/tags/随想/" term="随想"/>
+    <category scheme="http://cyfloel.github.io/tags/生活/" term="生活"/>
+    <category scheme="http://cyfloel.github.io/tags/学习/" term="学习"/>
+    <category scheme="http://cyfloel.github.io/categories/随想/" term="随想"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://cyfloel.github.io/2013/12/07/hello-world/"/>
+    <id>http://cyfloel.github.io/2013/12/07/hello-world/</id>
+    <published>2013-12-07T09:25:45.000Z</published>
+    <updated>2013-12-07T09:25:45.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://zespia.tw/hexo" target="_blank">Hexo</a>! This is your very first post. Check <a href="http://zespia.tw/hexo/docs" target="_blank">documentation</a> to learn how to use.</p>
+]]></content>
+  </entry>
+</feed>
