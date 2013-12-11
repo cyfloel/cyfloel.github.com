@@ -4,13 +4,67 @@
   <subtitle><![CDATA[一步一脚印]]></subtitle>
   <link href="http://cyfloel.github.io//atom.xml" rel="self"/>
   <link href="http://cyfloel.github.io/"/>
-  <updated>2013-12-08T14:36:25.194Z</updated>
+  <updated>2013-12-11T13:12:01.028Z</updated>
   <id>http://cyfloel.github.io//</id>
   <author>
     <name><![CDATA[Cyfloel]]></name>
     <email><![CDATA[yangzhibin228@sina.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[C++学习——No.1]]></title>
+    <link href="http://cyfloel.github.io/2013/12/11/c++_review1/"/>
+    <id>http://cyfloel.github.io/2013/12/11/c++_review1/</id>
+    <published>2013-12-11T00:43:40.000Z</published>
+    <updated>2013-12-11T13:11:31.000Z</updated>
+    <content type="html"><![CDATA[<p>本科毕业后就再也没用过C++，可是现在发现，基本每个程序员的要求，都是从C++开始，于是，重新开始C++的学习之路，最近几天看了一下以前的课本，这里把一些觉得有用的东西记录一下，尤其是几个排序的算法，前面的关于变量的基础性东西就不在这里多叙述了。<a id="more"></a></p>
+<p>第一个记录是switch的使用，其实主要是对那道计费题目的方法比较感兴趣：</p>
+<p>路程（s）越远，运费越低，标准为：</p>
+<pre><code>s <span class="tag">&lt; <span class="attribute">250</span>, <span class="attribute">d</span>=<span class="value">0</span>
+<span class="attribute">s</span> &gt;</span>= 250 &amp; s <span class="tag">&lt; <span class="attribute">500</span>, <span class="attribute">d</span>=<span class="value">0.02</span> 
+<span class="attribute">s</span> &gt;</span>= 500 &amp; s <span class="tag">&lt; <span class="attribute">1000</span>, <span class="attribute">d</span>=<span class="value">0.05</span>
+<span class="attribute">s</span> &gt;</span>= 1000 &amp; s <span class="tag">&lt; <span class="attribute">2000</span>, <span class="attribute">d</span>=<span class="value">0.08</span>
+<span class="attribute">s</span> &gt;</span>= 2000 &amp; s <span class="tag">&lt; <span class="attribute">3000</span>, <span class="attribute">d</span>=<span class="value">0.10</span>
+<span class="attribute">s</span> &gt;</span>= 3000, d=0.15
+f = p * w * s * (1-d)</code></pre>
+<p>可以用C++的if语句来完成，同样也可以用switch语句，if语句的话很简单，就不多说了，来看看switch是怎么实现的：</p>
+<pre><code><span class="preprocessor">#include &lt;iostream&gt;</span>
+<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;
+<span class="keyword">int</span> main(){
+    <span class="keyword">int</span> c;
+    <span class="keyword">float</span> d, p, w, s, f;
+    <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入p，w，s，以空格键间隔。"</span>;
+    <span class="built_in">cin</span> &gt;&gt; p &gt;&gt; w &gt;&gt; s;
+    <span class="keyword">if</span> (s &gt;= <span class="number">3000</span>)
+        c = <span class="number">12</span>;
+    <span class="keyword">else</span>
+        c = <span class="keyword">int</span>(s) / <span class="number">250</span>;
+    <span class="keyword">switch</span> (c){
+    <span class="keyword">case</span> <span class="number">0</span>: d = <span class="number">0</span>; <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="number">1</span>: d = <span class="number">2</span>; <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="number">2</span>:
+    <span class="keyword">case</span> <span class="number">3</span>: d = <span class="number">5</span>; <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="number">4</span>:
+    <span class="keyword">case</span> <span class="number">5</span>:
+    <span class="keyword">case</span> <span class="number">6</span>:
+    <span class="keyword">case</span> <span class="number">7</span>: d = <span class="number">8</span>; <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="number">8</span>: 
+    <span class="keyword">case</span> <span class="number">9</span>:
+    <span class="keyword">case</span> <span class="number">10</span>:
+    <span class="keyword">case</span> <span class="number">11</span>: d = <span class="number">10</span>; <span class="keyword">break</span>;
+    <span class="keyword">case</span> <span class="number">12</span>: d = <span class="number">15</span>; <span class="keyword">break</span>;
+    }
+    f = p * w * s * (<span class="number">1</span> - d / <span class="number">100.0</span>);
+    <span class="built_in">cout</span> &lt;&lt; <span class="string">"freight="</span> &lt;&lt; f &lt;&lt; endl;
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+<p>待续。。。</p>
+]]></content>
+    <category scheme="http://cyfloel.github.io/tags/C++/" term="C++"/>
+    <category scheme="http://cyfloel.github.io/tags/Review/" term="Review"/>
+    <category scheme="http://cyfloel.github.io/tags/Program/" term="Program"/>
+    <category scheme="http://cyfloel.github.io/categories/C++/" term="C++"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[第一个Blog]]></title>
     <link href="http://cyfloel.github.io/2013/12/08/the-first-blog/"/>
