@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Visual Studio 2010 + OpenCV2.4.7开发环境搭建 | 夜星寒</title>
+  <meta name="author" content="Cyfloel">
+  
+  <meta name="description" content="最近在弄一个车牌识别的简单程序，决定使用C++和OpenCV来实现。从网上找资料，自己学习已经有一段时间了，但是还停留在车牌定位的实现上，效果不是很理想，不过总算学了一段时间，还是得总结一下，免得自己碰到的一些问题或者想法会遗忘，毕竟也是自己的经验。唠叨了不少，开始进入正题，今天先记录下如何搭建开发环境。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Visual Studio 2010 + OpenCV2.4.7开发环境搭建"/>
+  <meta property="og:site_name" content="夜星寒"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="夜星寒" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11520870-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">夜星寒</a></h1>
+  <h2><a href="/">一步一脚印</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">主页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="/about">关于我</a></li>
+    
+      <li><a href="/atom.xml">RSS</a></li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div> 
+        <time datetime="2013-12-24T12:12:30.000Z"><a href="/2013/12/24/opencv_vs2010/">12月 24 2013</a></time>
+      
+      
+  
+    <h1 class="title">Visual Studio 2010 + OpenCV2.4.7开发环境搭建</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>最近在弄一个车牌识别的简单程序，决定使用C++和OpenCV来实现。从网上找资料，自己学习已经有一段时间了，但是还停留在车牌定位的实现上，效果不是很理想，不过总算学了一段时间，还是得总结一下，免得自己碰到的一些问题或者想法会遗忘，毕竟也是自己的经验。唠叨了不少，开始进入正题，今天先记录下如何搭建开发环境。<a id="more"></a></p>
+<p><strong>第一步 下载Visual Studio和OpenCV</strong></p>
+<p>Visual Studio的下载就不多说了。OpenCV简单来说就是一个图像视觉库，里面封装了各种功能的函数，方便使用者来对图像进行处理。OpenCV的可以从它的<a href="http://opencv.org/" target="_blank">官网</a>上下载得到，目前最新的版本是OpenCV2.4.7，本文使用的也是这个版本。</p>
+<p>OpenCV的安装很简单，现在都已经打包好，不需要以前那样还需要使用到CMake。本文安装在D盘Program Files下的OpenCV文件夹中，即D:\Program Files\OpenCV；</p>
+<p><strong>第二步 配置系统环境变量</strong></p>
+<p>右键我的电脑-&gt;属性-&gt;高级系统设置-&gt;高级[选项卡]-&gt;环境变量；然后在系统变量里面，选着Path变量，选择编辑，把路径D:\Program Files\OpenCV\opencv\build\x64\vc10\bin添加进去（PS：64位系统的话为x64，32位系统为x86，另外opencv前面的路径依据各自安装路径而定）。<br><img src="http://cyfloel.u.qiniudn.com/image/1.jpg" alt=""></p>
+<p>把具体的路径添加到变量值里面：<br><img src="http://cyfloel.u.qiniudn.com/image/2.jpg" alt=""></p>
+<p><strong>第三步 配置Visual Studio 2010</strong></p>
+<p>前面已经把环境变量配置完毕，接下来为了使Visual Studio能够找到OpenCV的函数库，需要对VS配置一下，配置VS的方法也很简单，首先打开VS，新建一个Win32控制台的空项目。<br><img src="http://cyfloel.u.qiniudn.com/image/3.jpg" alt=""></p>
+<p>点击确认，在弹出的窗口选择下一步，在附加选项，把空项目勾选。<br><img src="http://cyfloel.u.qiniudn.com/image/4.jpg" alt=""><br>这样就新建了一个空白的控制台项目。接着在菜单栏选择项目-&gt;属性，在属性页配置属性中，配置VC++目录和链接器两个选项。<br><img src="http://cyfloel.u.qiniudn.com/image/5.jpg" alt=""><br>选择VC++目录-&gt;包含目录，编辑包含目录，把</p>
+<pre><code>D:<span class="command">\Program</span> Files<span class="command">\OpenCV</span><span class="command">\opencv</span><span class="command">\build</span><span class="command">\include</span>
+D:<span class="command">\Program</span> Files<span class="command">\OpenCV</span><span class="command">\opencv</span><span class="command">\build</span><span class="command">\include</span><span class="command">\opencv</span>
+D:<span class="command">\Program</span> Files<span class="command">\OpenCV</span><span class="command">\opencv</span><span class="command">\build</span><span class="command">\include</span><span class="command">\opencv</span>2</code></pre>
+<p>添加到包含目录里面，如下图：<br><img src="http://cyfloel.u.qiniudn.com/image/6.jpg" alt=""><br>接着编辑库目录，把</p>
+<pre><code>D:<span class="command">\Program</span> Files<span class="command">\OpenCV</span><span class="command">\opencv</span><span class="command">\build</span><span class="command">\x</span>64<span class="command">\vc</span>10<span class="command">\lib</span></code></pre>
+<p>添加到库目录里面，如下图：<br><img src="http://cyfloel.u.qiniudn.com/image/7.jpg" alt=""><br>最后是配置链接器，选择链接器-&gt;输入-&gt;附加依赖项，把下面的内容添加到附加依赖项里面</p>
+<pre><code><span class="title">opencv_calib3d247d</span>.lib
+<span class="title">opencv_contrib247d</span>.lib
+<span class="title">opencv_core247d</span>.lib
+<span class="title">opencv_features2d247d</span>.lib
+<span class="title">opencv_flann247d</span>.lib
+<span class="title">opencv_gpu247d</span>.lib
+<span class="title">opencv_highgui247d</span>.lib
+<span class="title">opencv_imgproc247d</span>.lib
+<span class="title">opencv_legacy247d</span>.lib
+<span class="title">opencv_ml247d</span>.lib
+<span class="title">opencv_nonfree247d</span>.lib
+<span class="title">opencv_objdetect247d</span>.lib
+<span class="title">opencv_photo247d</span>.lib
+<span class="title">opencv_stitching247d</span>.lib
+<span class="title">opencv_ts247d</span>.lib
+<span class="title">opencv_video247d</span>.lib
+<span class="title">opencv_videostab247d</span>.lib
+<span class="title">opencv_calib3d247</span>.lib
+<span class="title">opencv_contrib247</span>.lib
+<span class="title">opencv_core247</span>.lib
+<span class="title">opencv_features2d247</span>.lib
+<span class="title">opencv_flann247</span>.lib
+<span class="title">opencv_gpu247</span>.lib
+<span class="title">opencv_highgui247</span>.lib
+<span class="title">opencv_imgproc247</span>.lib
+<span class="title">opencv_legacy247</span>.lib
+<span class="title">opencv_ml247</span>.lib
+<span class="title">opencv_nonfree247</span>.lib
+<span class="title">opencv_objdetect247</span>.lib
+<span class="title">opencv_photo247</span>.lib
+<span class="title">opencv_stitching247</span>.lib
+<span class="title">opencv_ts247</span>.lib
+<span class="title">opencv_video247</span>.lib
+<span class="title">opencv_videostab247</span>.lib</code></pre>
+<p>上面的内容其实就是OpenCV所在目录里面lib目录的内容，如：</p>
+<pre><code>D:<span class="command">\Program</span> Files<span class="command">\OpenCV</span><span class="command">\opencv</span><span class="command">\build</span><span class="command">\x</span>64<span class="command">\vc</span>10<span class="command">\lib</span></code></pre>
+<p><img src="http://cyfloel.u.qiniudn.com/image/8.jpg" alt=""></p>
+<p>到此，OpenCV的配置就已经完成了，下面可以试试使用OpenCV来调用图像，测试是否可以使用。（注：lib目录里面后面的数字如247，其实就OpenCV的版本，比如本文的是OpenCV2.4.7，所以数字就是247，如果是旧的版本或者更新版本，只需要把相应数字改成对应的版本号就可以，也可以直接查看lib目录得到；路径的具体位置要根据自己的安装路径而定）</p>
+<p>下面测试一下配置是否成功，在新建的项目里，选择源文件，添加新建项，选择C++文件，采用下面的代码来进行测试：</p>
+<pre><code><span class="preprocessor">#include "opencv2/opencv.hpp"</span>
+<span class="preprocessor">#include "opencv2/highgui/highgui.hpp"</span>
+<span class="keyword">using</span> <span class="class"><span class="keyword">namespace</span> <span class="title">cv</span>;
+
+<span class="title">int</span> <span class="title">main</span>(){</span>
+    <span class="keyword">const</span> <span class="keyword">char</span>* wndname = <span class="string">"Test Demo"</span>;  <span class="comment">//窗口的名称;</span>
+    <span class="keyword">char</span>* names[] = {<span class="string">"goodnight.jpg"</span>, <span class="number">0</span>};  <span class="comment">//文件名称，文件放在源文件所在目录;</span>
+    Mat img = imread(names[<span class="number">0</span>], <span class="number">1</span>);  <span class="comment">//读取彩色图像; </span>
+    namedWindow(wndname, <span class="number">1</span>);  <span class="comment">//创建图像窗口;</span>
+    imshow(wndname, img);
+    waitKey(<span class="number">0</span>);  <span class="comment">//控制图像显示时间，参数为空或0是，表示一直停留;</span>
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</code></pre>
+<p>如果配置成功，运行结果如下图:<br><img src="http://cyfloel.u.qiniudn.com/image/9.jpg" alt=""><br>注：如果编译成功，运行出现下面的错误</p>
+<blockquote>
+<p>LINK : fatal error LNK1123: 转换到 COFF 期间失败: 文件无效或损坏</p>
+</blockquote>
+<p>解决方法是：<br>项目-&gt;属性-&gt;配置属性-&gt;清单工具-&gt;输入和输出-&gt;嵌入清单；原来是“是”，将其改为“否”即可。</p>
+<p>另外，按照本文进行配置，有一个问题就是每新建一个项目后，都需要重新配置一遍，暂时还没找到问题所在，但也许只是我个人会出现这种问题，本文仅供参考。</p>
+<p>后面会继续慢慢整理OpenCV的学习体会，待续。。。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/OpenCV/">OpenCV</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/OpenCV/">OpenCV</a>, <a href="/tags/Visual Studio/">Visual Studio</a>, <a href="/tags/C++/">C++</a>
+  </div>
+
+        <!-- Baidu Button BEGIN -->
+        <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+        <a class="bds_qzone"></a>
+        <a class="bds_tsina"></a>
+        <a class="bds_tqq"></a>
+        <a class="bds_renren"></a>
+        <a class="bds_t163"></a>
+        <span class="bds_more">更多</span>
+        <a class="shareCount"></a>
+        </div>
+        <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6886641" ></script>
+        <script type="text/javascript" id="bdshell_js"></script>
+        <script type="text/javascript">
+        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+        </script>
+        <!-- Baidu Button END -->
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"cyfloel"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
+</section>
+
+
+
+</div></div>
+  <!--  <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:cyfloel.github.io/">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/C++/">C++</a><small>1</small></li>
+  
+    <li><a href="/categories/OpenCV/">OpenCV</a><small>1</small></li>
+  
+    <li><a href="/categories/随想/">随想</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/C++/">C++</a><small>2</small></li>
+  
+    <li><a href="/tags/OpenCV/">OpenCV</a><small>1</small></li>
+  
+    <li><a href="/tags/Program/">Program</a><small>1</small></li>
+  
+    <li><a href="/tags/Review/">Review</a><small>1</small></li>
+  
+    <li><a href="/tags/Visual Studio/">Visual Studio</a><small>1</small></li>
+  
+    <li><a href="/tags/学习/">学习</a><small>1</small></li>
+  
+    <li><a href="/tags/生活/">生活</a><small>1</small></li>
+  
+    <li><a href="/tags/随想/">随想</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside> -->
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2013 Cyfloel
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
