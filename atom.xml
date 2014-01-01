@@ -4,13 +4,31 @@
   <subtitle><![CDATA[一步一脚印]]></subtitle>
   <link href="http://cyfloel.github.io//atom.xml" rel="self"/>
   <link href="http://cyfloel.github.io/"/>
-  <updated>2013-12-25T02:15:17.666Z</updated>
+  <updated>2014-01-01T03:12:13.565Z</updated>
   <id>http://cyfloel.github.io//</id>
   <author>
     <name><![CDATA[Cyfloel]]></name>
     <email><![CDATA[yangzhibin228@sina.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[2014年]]></title>
+    <link href="http://cyfloel.github.io/2014/01/01/year2014/"/>
+    <id>http://cyfloel.github.io/2014/01/01/year2014/</id>
+    <published>2014-01-01T02:40:58.000Z</published>
+    <updated>2014-01-01T03:12:02.000Z</updated>
+    <content type="html"><![CDATA[<p>今天迎来了2014年的第一天，元旦不再像往年那样放三天假，而是采用新的放假方式。对于新的一年来临，总会有很多的想法，本想昨晚辞旧迎新之际好好回顾一下，但因为公司的一些事情，弄得没有心情。新一年来临，总是要回顾一下上年的情况，也算是对自己的一个交代，同时也希望能在接下来的时间里，能够好好计划一下，为了不让2014年在迷茫中虚度。</p>
+<p>回首2013年，变化还是很大的，从一个刚出校门的学生向职业工作者转变。离开了校园，从此进入社会，说实在，一开始还是没有什么不习惯的，但慢慢地发现了社会许多跟学校不一样的地方，无论是人还是事，慢慢地让自己不断去适应，去改变。从进入公司第一天到现在，将近有半年的时间了，在这短短的半年里，也发生了不少的事情，认识了新伙伴，认识了老员工和部门领导，但也看到了老员工和新伙伴的离开，原因的话，想想应该也就是那么回事，就像马云说的，不是心委屈了，就是钱给少了。有些时候，常常会后悔当初没有接受另外一个offer，而是选择在现在的公司工作，也许选择另外的offer，现在的情况会有很大的不同。不过那也只是在某些时候突然在脑海中冒出的想法而已，因为选择了就没法再去后悔了，与其后悔不如往前看，做出另外的选择。<a id="more"></a></p>
+<p>2014年，需要给自己一个计划，也许最终这一个计划并没有实现多少，但也能在某些时候推动自己前进。接下来的一年里，有几件事是必须做好的。这里就先卖个关子，虽然只有自己看，但在没有事成之前，我还是不太喜欢拿出来说。不过有两点是一定要好好考虑的，一个是前进的动力，一个是短期的目标。看起来好像不着边际。这半年来渐渐把自己刚出校园的激情和动力磨灭了，在接下来的时间里，需要重新给自己一个方向，激发自己前进的动力。长远的目标暂时还没想好，但短期的目标可以好好去计划一下，然后一步一步的朝着目标进军。</p>
+<p>啰啰嗦嗦了不少，原本是想来吐槽一下的，但想想，新的一年，还是在憧憬中前进比较好，也许以后回首，吐槽的事情也只是一件微不足道的小事。</p>
+<p>新的一年，希望自己能够走得更远，一个一个地实现自己的目标。在这一路上，感谢有你们的陪伴，感谢我的挚友和女友。</p>
+<p>2014年，带着希望和憧憬，前进。。。</p>
+]]></content>
+    <category scheme="http://cyfloel.github.io/tags/随想/" term="随想"/>
+    <category scheme="http://cyfloel.github.io/tags/生活/" term="生活"/>
+    <category scheme="http://cyfloel.github.io/tags/总结/" term="总结"/>
+    <category scheme="http://cyfloel.github.io/categories/随想/" term="随想"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[Visual Studio 2010 + OpenCV2.4.7开发环境搭建]]></title>
     <link href="http://cyfloel.github.io/2013/12/24/opencv_vs2010/"/>
